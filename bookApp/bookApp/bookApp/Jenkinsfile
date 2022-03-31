@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven'
+    }
+
+    stages {
+
+        stage('Build Maven') {
+            steps{
+                 git branch: 'main', credentialsId: 'DivyaPanchakshire', url: 'https://github.com/DivyaPanchakshire/Book_Store_Management_System.git
+                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                
+            }
+        }   
+    }
+}
