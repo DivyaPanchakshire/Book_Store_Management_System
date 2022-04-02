@@ -1,0 +1,106 @@
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="outlookBg/outlook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+      height: 100%;
+      width: 100%;
+      background-color: #E1D9D1;
+      color: BLACK;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #C4AEAD;
+}
+
+li a:hover:not(.active) {
+    background-color: white;
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+  }
+    </style>
+</head>
+<body>
+
+<ul>
+<!--    <li><img src="outlookBg/Images/logo.jpg" alt="logo" height="80cm" width="92cm"></li>-->
+    <li><a  href="#home" style="color:black">HOME</a></li>
+    <li><a th:href="@{'UserBooksTable'}" style="color:black">BOOKS</a></li>
+    <li><a href="#contact" style="color:black">CONTACT</a></li>
+
+    </div>
+
+
+
+    <div align="right">
+        <td>[[${username}]]</td>
+        <td><a class="btn btn-primary m-2" th:href="@{'/loginPage'}">Log Out</a> </td>
+    </div>
+
+
+
+    <div class="right">
+        <form id="form">
+            <input type="search" id="query" name="q" placeholder="Search...">
+            <button>Search</button>
+        </form>
+
+    </div>
+</ul>
+
+
+
+
+
+<hr>
+<section id="books_available">
+    <h1 class="webTitle" style="color:black">
+
+        -   BOOKS -</h1>
+    <hr>
+    <div class="row">
+        <div class="column">
+            <a th:href="@{'/Bird_Box'}"> <img src="outlookBg/Images/Nm.jpg" style="width:50%"></a>
+        </div>
+        <div class="column">
+            <a th:href="@{'/marvel'}">
+                <img src="bookPagesBg/mv1.jpg" alt="Forest" style="width:50%"> </a>
+        </div>
+        <div class="column">
+            <a th:href="@{'/abdulKalam'}" >
+                <img src="bookPagesBg/abdulkalam.jpg" alt="apj" style="width:50%"></a>
+            <h1></h1>
+            <a th:href="@{'/java'}" >
+                <img src="bookPagesBg/Core%20Java%20Volume%20I--Fundamentals.jpg" alt="jv" style="width:50% "></a>
+        </div>
+        <div class="column">
+            <a th:href="@{'/fis'}" >
+                <img src="bookPagesBg/c1.jpg" alt="fis" style="width:50%"></a>
+        </div>
+        <div class="column">
+            <a th:href="@{'/harryPotter'}" >
+                <img src="bookPagesBg/Harry%20Potter%20and%20the%20Deathly%20Hallows.jpg" alt="hp" style="width:50%"></a>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <footer  class="site-footer">
+        <div class="container">
+            <div class="row" >
+                <hr>
+                <h2 style="text-align: center"><u>CONTACT US</u></h2>
+                <h4 style="text-align: center">For any Queries Do Contact<br><br>--abhinav@gmail.com--<br>--samreen@gmail.com--<br>--nehasapalya@gmail.com--<br>--divya@gmail.com--<br>--nehamithal@gmail.com--<br>--samuel@gmail.com--</h4>
+            </div>
+        </div>
+    </footer>
+</section>
+</body>
+</html>
